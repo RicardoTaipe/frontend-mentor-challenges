@@ -1,0 +1,86 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+/* Set core body defaults */
+body {
+  margin: 0;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+:root {
+}
+
+body {
+  background-color: hsl(212, 45%, 89%);
+  font-family: 'Outfit', sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 22%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
+  overflow: hidden;
+  padding: 0.875rem;
+  height: auto;
+  box-shadow: 1px 0px 14px -9px hsl(220deg 15% 55%);
+}
+
+.card_image {
+  border-radius: 1rem;
+}
+
+.card_title {
+  margin: 1rem 0;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-align: center;
+  padding-inline: 0.5rem;
+  color: hsl(218, 44%, 22%);
+}
+
+.card_desc {
+  margin: 1rem 0;
+  text-align: center;
+  padding-inline: 0.5rem;
+  color: hsl(220, 15%, 55%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 85%;
+    margin: 0 auto;
+  }
+}
