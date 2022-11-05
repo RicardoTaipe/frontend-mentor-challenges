@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Rating state start -->
+    <main class="card">
+      <section class="card-front">
+        <div class="card-icon">
+          <img src="images/icon-star.svg" alt="icon star" />
+        </div>
+        <h1 class="card-title">How did we do?</h1>
+        <p class="card-copy">
+          Please let us know how we did with your support request. All feedback
+          is appreciated to help us improve our offering!
+        </p>
+        <div class="card-rating">
+          <span class="rating-choice">1</span>
+          <span class="rating-choice">2</span>
+          <span class="rating-choice">3</span>
+          <span class="rating-choice">4</span>
+          <span class="rating-choice">5</span>
+        </div>
+        <button class="card-btn selected">Submit</button>
+      </section>
+      <section class="card-back hide">
+        <img src="images/illustration-thank-you.svg" alt="thank you" />
+        <p class="card-result">You selected 4 out of 5</p>
+        <h2 class="card-title">Thank you!</h2>
+        <p class="card-copy tex-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don't hesitate to get in touch!
+        </p>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
