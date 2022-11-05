@@ -172,7 +172,7 @@ body {
   }
   .card > img {
     width: 50%;
-    background-image: url('/images/image-product-desktop.jpg');
+    background-image: url('images/image-product-desktop.jpg');
   }
   .card-description {
     width: 50%;
