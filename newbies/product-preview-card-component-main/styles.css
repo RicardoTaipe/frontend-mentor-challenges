@@ -156,9 +156,13 @@ body {
   background-color: hsl(158, 36%, 20%);
 }
 
-.card-button p {
+.card-button {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
+  padding: 1rem;
+}
+
+.card-button > img {
   padding: 1rem;
 }
 
