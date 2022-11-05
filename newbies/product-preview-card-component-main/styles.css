@@ -90,8 +90,8 @@ body {
 }
 
 .card {
+  display: flex;
   flex-direction: column;
-  border: 1px solid red;
   border-radius: 0.875rem;
   overflow: hidden;
   width: 92%;
@@ -100,6 +100,7 @@ body {
 .card-image {
   aspect-ratio: 4/3;
   object-fit: cover;
+  max-width: 100%;
 }
 
 .card-category {
@@ -128,7 +129,7 @@ body {
   font-family: 'Fraunces', sans-serif;
   display: inline-block;
   font-size: 2rem;
-  margin: 1rem;
+  margin: 1rem 0;
   color: hsl(158, 36%, 37%);
 }
 .card-currency {
@@ -138,6 +139,7 @@ body {
 .card-price {
   display: inline-block;
   text-decoration: line-through;
+  margin: 0 1rem;
 }
 .card-button {
   display: flex;
@@ -150,8 +152,30 @@ body {
   border-radius: 0.5rem;
 }
 
+.card-button:hover {
+  background-color: hsl(158, 36%, 20%);
+}
+
 .card-button p {
   color: hsl(0, 0%, 100%);
   font-weight: 700;
   padding: 1rem;
+}
+
+@media only screen and (min-width: 376px) {
+  body {
+    margin: 0;
+  }
+  .card {
+    flex-direction: row;
+    max-width: 600px;
+  }
+  .card > img {
+    width: 50%;
+    background-image: url('/images/image-product-desktop.jpg');
+  }
+  .card-description {
+    width: 50%;
+    padding: 2.5rem;
+  }
 }
