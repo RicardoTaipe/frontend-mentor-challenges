@@ -1,10 +1,4 @@
-:root {
-  --pale-blue: hsl(225, 100%, 94%);
-  --bright-blue: hsl(245, 75%, 52%);
-  --very-pale-blue: hsl(225, 100%, 98%);
-  --desaturated-blue: hsl(224, 23%, 55%);
-  --dark-blue: hsl(223, 47%, 23%);
-}
+/**************** RESET CSS*******************/
 
 /* Box sizing rules */
 *,
@@ -14,10 +8,17 @@
 }
 
 /* Remove default margin */
-* {
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
-  padding: 0;
-  font: inherit;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
@@ -29,11 +30,6 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  height: 100%;
 }
 
 /* Set core body defaults */
@@ -50,10 +46,17 @@ a:not([class]) {
 
 /* Make images easier to work with */
 img,
-picture,
-svg {
+picture {
   max-width: 100%;
   display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
@@ -72,59 +75,112 @@ svg {
   }
 }
 
+/********* END RESET CSS **************/
+:root {
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
 body {
   font-family: 'Red Hat Display', sans-serif;
   background-color: var(--pale-blue);
-  min-height: 100vh;
+  height: 100vh;
   background-image: url(images/pattern-background-desktop.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
 }
 
 .container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
   background: white;
   overflow: hidden;
+  width: 88%;
   border-radius: 20px;
-  max-width: 450px;
+  margin: 0 auto;
+  max-width: 330px;
+  box-shadow: 0px 12px 24px 0px rgba(128, 128, 128, 0.32);
 }
+
 .text-content {
-  padding: 3.375rem 3.125rem;
   text-align: center;
+  padding: 2rem 1rem;
 }
 
 .title {
   color: var(--dark-blue);
   font-weight: 900;
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
   color: var(--desaturated-blue);
-  margin-bottom: 25px;
+  padding-inline: 1rem;
 }
 
 .plan-box {
   background-color: var(--very-pale-blue);
   border-radius: 12px;
   display: flex;
-  padding: 25px;
+  margin: 2rem 0;
+  padding: 1rem 0;
 }
 
 .plan-box-left {
+  flex: 1;
   display: flex;
   align-items: center;
-  text-align: left;
+  justify-content: center;
 }
-.attribution {
-  font-size: 11px;
-  text-align: center;
+
+.plan-box-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+.plan-box-center > h5 {
+  margin: 0;
+  color: var(--dark-blue);
+  font-weight: 900;
+}
+
+.plan-box-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+.proceed-btn {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  background-color: var(--bright-blue);
+  color: var(--very-pale-blue);
+  border-radius: 1rem;
+  font-weight: 700;
+  padding: 1rem;
+  box-shadow: 0px 12px 24px 0px rgba(128, 128, 128, 0.66);
+}
+
+.plan-box-center > p {
+  color: var(--desaturated-blue);
+}
+
+.cancel-btn {
+  width: 100%;
+  display: block;
+  text-decoration: none;
+  color: var(--desaturated-blue);
+  font-weight: 700;
+  margin: 1rem 0 0 0;
 }
