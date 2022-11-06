@@ -209,4 +209,13 @@ body {
   body {
     background-image: url(images/pattern-background-desktop.svg);
   }
+  .container {
+    max-width: 450px;
+  }
+  .title {
+    font-size: 1.75rem;
+  }
+  .text-content {
+    padding: 2rem 3rem;
+  }
 }
