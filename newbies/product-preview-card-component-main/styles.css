@@ -98,7 +98,6 @@ body {
 }
 
 .card-image {
-  aspect-ratio: 4/3;
   object-fit: cover;
   max-width: 100%;
 }
@@ -138,7 +137,6 @@ body {
 }
 .card-price {
   display: inline-block;
-  text-decoration: line-through;
   margin: 0 1rem;
 }
 .card-button {
@@ -166,6 +164,18 @@ body {
   padding: 1rem;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 @media only screen and (min-width: 376px) {
   body {
     margin: 0;
@@ -173,10 +183,6 @@ body {
   .card {
     flex-direction: row;
     max-width: 600px;
-  }
-  .card > img {
-    width: 50%;
-    background-image: url('images/image-product-desktop.jpg');
   }
   .card-description {
     width: 50%;

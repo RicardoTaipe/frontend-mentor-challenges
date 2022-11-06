@@ -194,3 +194,9 @@ body {
 .hide {
   display: none;
 }
+
+@media only screen and (min-width: 376px) {
+  .card {
+    max-width: 412px;
+  }
+}
