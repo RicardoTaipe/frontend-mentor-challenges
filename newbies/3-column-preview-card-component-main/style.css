@@ -92,6 +92,7 @@ body {
   align-items: center;
   font-weight: 400;
   background-color: var(--very-light-gray);
+  min-height: 100vh;
 }
 
 .container {
@@ -100,6 +101,7 @@ body {
   width: 87%;
   border-radius: 0.8rem;
   overflow: hidden;
+  max-width: 920px;
 }
 .card {
   padding: 3rem;
@@ -154,4 +156,13 @@ body {
 }
 .text-variant {
   color: var(--very-dark-cyan);
+}
+
+@media only screen and (min-width: 376px) {
+  .container {
+    flex-direction: row;
+  }
+  .card-btn {
+    margin-top: 6.2rem;
+  }
 }
