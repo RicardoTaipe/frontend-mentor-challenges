@@ -2,18 +2,22 @@ const button = document.querySelector('.card-btn');
 const title = document.querySelector('.card-title');
 const quote = document.querySelector('.quote');
 
-fetchQuote(71)
+fetchQuote('asdv')
   .then((data) => {
     updateView(data);
   })
-  .catch(() => {});
+  .catch(() => {
+    updateView({ id: 'error', advice: 'Somethin went wrong!. Try again.' });
+  });
 
 button.addEventListener('click', async () => {
   fetchQuote()
     .then((data) => {
       updateView(data);
     })
-    .catch(() => {});
+    .catch(() => {
+      updateView({ id: 'error', advice: 'Somethin went wrong!. Try again.' });
+    });
 });
 
 function updateView(data) {
