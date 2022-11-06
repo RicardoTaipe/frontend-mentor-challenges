@@ -99,7 +99,7 @@ body {
   background-color: var(--dark-grayish-blue);
   text-align: center;
   position: relative;
-  width: 90%;
+  width: min(90%, 540px);
   border-radius: 1rem;
   padding: 0 1rem;
   transform: translateY(-3rem);
@@ -141,4 +141,21 @@ body {
 
 .card-btn:hover {
   box-shadow: 0px 0px 39px 5px var(--neon-green);
+}
+
+@media only screen and (min-width: 376px) {
+  .card {
+    padding-inline: 24px;
+    top: 36px;
+  }
+  .quote {
+    font-size: 28px;
+  }
+  .card-title {
+    margin-top: 3rem;
+  }
+  .card-divider {
+    margin-top: 2.5rem;
+    margin-bottom: 3.5rem;
+  }
 }
