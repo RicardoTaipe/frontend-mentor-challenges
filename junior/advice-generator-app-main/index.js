@@ -2,7 +2,7 @@ const button = document.querySelector('.card-btn');
 const title = document.querySelector('.card-title');
 const quote = document.querySelector('.quote');
 
-fetchQuote('asdv')
+fetchQuote(71)
   .then((data) => {
     updateView(data);
   })
