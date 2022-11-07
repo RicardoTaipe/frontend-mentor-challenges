@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="heading-bg">
+      <img src="images/pattern-circles.svg" alt="background" />
+      <div class="heading-title">
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <p class="copy">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </div>
+    <section class="card">
+      <div class="card-selection">
+        <p class="reviews">100K PAGEVIEWS</p>
+        <input type="range" min="1" max="100" value="50" class="slider">
+        <p class="price">
+          <span class="quantity">$16.00 </span>/ month
+        </p>
+      </div>
+      <div class="card-discount">
+        Monthly Billing
+        <label class="switch">
+          <input type="checkbox">
+          <span class="toggle round"></span>
+        </label>
+        <p>Yearly Billing </p>
+        <p>25% discount</p>
+      </div>
+      <hr />
+      <div class="card-trial">
+        <ul class="trial-list">
+          <li>Unlimited websites</li>
+          <li>100% data ownership</li>
+          <li>Email reports</li>
+        </ul>
+        <button class="trial-btn">Start my trial</button>
+      </div>
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
