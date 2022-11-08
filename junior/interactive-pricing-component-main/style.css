@@ -184,8 +184,13 @@ body {
     background-color: var(--light-grayish-red);
     color: var(--light-red);
     border-radius: 1rem;
-    padding: 0.2rem 0.3rem;
+    padding: 0.2rem 0.1rem;
     font-size: 12px;
+    overflow: hidden;
+    width: 20%;
+    white-space: nowrap;
+    float: right;
+    margin-right: 0.875rem;
 }
 
 .divider {
@@ -411,5 +416,7 @@ input[type=range]::-moz-range-track {
 
     .discount {
         margin-left: 1rem;
+        width: auto;
+        float: none;
     }
 }
