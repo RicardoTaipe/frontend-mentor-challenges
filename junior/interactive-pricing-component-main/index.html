@@ -29,26 +29,25 @@
     <section class="card">
       <div class="card-selection">
         <p class="reviews">100K PAGEVIEWS</p>
-        <input type="range" min="1" max="100" value="50" class="slider">
+        <input type="range" min="0" max="100" value="10" step="10" class="slider">
         <p class="price">
           <span class="quantity">$16.00 </span>/ month
         </p>
       </div>
       <div class="card-discount">
-        Monthly Billing
+        <p>Monthly Billing</p>
         <label class="switch">
           <input type="checkbox">
           <span class="toggle round"></span>
         </label>
-        <p>Yearly Billing </p>
-        <p>25% discount</p>
+        <p>Yearly Billing <span class="discount">-25%</span></p>
       </div>
-      <hr />
+      <hr class="divider" />
       <div class="card-trial">
-        <ul class="trial-list">
-          <li>Unlimited websites</li>
-          <li>100% data ownership</li>
-          <li>Email reports</li>
+        <ul class="trial-list space-y-4">
+          <li class="trial-list-item">Unlimited websites</li>
+          <li class="trial-list-item">100% data ownership</li>
+          <li class="trial-list-item">Email reports</li>
         </ul>
         <button class="trial-btn">Start my trial</button>
       </div>
