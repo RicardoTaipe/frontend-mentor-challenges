@@ -3,6 +3,7 @@ const cardBack = document.querySelector('.card-back');
 const cardResult = document.querySelector('.card-result');
 const rating = document.querySelectorAll('.rating-choice');
 const submitBtn = document.querySelector('.card-btn');
+const snackBar = document.getElementById("snackbar");
 let selectedValue = -1;
 
 rating.forEach((choice) => {
@@ -17,7 +18,7 @@ rating.forEach((choice) => {
 
 submitBtn.onclick = () => {
   if (selectedValue === -1) {
-    alert('Select an option!');
+    showSnackbar('Select an option!');
     return;
   }
   hide(cardFront);
@@ -29,6 +30,12 @@ cardBack.onclick = () => {
   hide(cardFront);
   hide(cardBack);
 };
+
+function showSnackbar(message) {
+  snackBar.innerHTML = message
+  snackBar.classList.toggle("show")
+  setTimeout(() => { snackBar.classList.toggle("show"); }, 2000);
+}
 
 function resetButtons() {
   rating.forEach((choice, index) => {
