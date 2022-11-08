@@ -107,8 +107,7 @@ body {
 }
 
 .container {
-    width: 88%;
-    border: 1px solid red;
+    width: min(88%, 540px);
 }
 
 .heading-bg {
@@ -145,6 +144,7 @@ body {
     border-radius: 1rem;
     background: var(--white);
     overflow: hidden;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .card-selection {
@@ -331,6 +331,7 @@ input[type=range]::-moz-range-track {
 
 
 .trial-btn {
+    display: block;
     color: var(--pale-blue);
     background-color: var(--dark-desaturated-blue);
     border-radius: 9999px;
@@ -338,4 +339,77 @@ input[type=range]::-moz-range-track {
     padding: 0.6rem 2.25rem;
     margin-top: 1.5rem;
     margin-bottom: 2rem;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 376px) {
+    body {
+        background-size: 100% 56%;
+    }
+
+    .container {
+        transform: translateY(-40px);
+    }
+
+    .heading-bg {
+        margin-bottom: 4rem;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .card-selection {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-inline: 44px;
+    }
+
+    .reviews {
+        flex: 1;
+    }
+
+    .slider {
+        order: 2;
+        margin-top: 40px;
+        margin-bottom: 22px;
+    }
+
+
+    .price {
+        flex: 1;
+        order: 1;
+    }
+
+    .quantity {
+        font-size: 38px;
+        margin-left: 1.25rem;
+    }
+
+    .card-trial {
+        flex-direction: row;
+        margin-block: 2rem;
+    }
+
+    .trial-list {
+        margin: 0 auto 0 1.2rem;
+    }
+
+    .trial-btn {
+        margin: 0 auto 0 4rem;
+    }
+
+    .card-discount p:first-child {
+        text-align: end;
+        padding-right: 1rem;
+    }
+
+    .card-discount p:last-child {
+        text-align: start;
+        padding-left: 1rem;
+    }
+
+    .discount {
+        margin-left: 1rem;
+    }
 }
