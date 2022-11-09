@@ -84,6 +84,7 @@ select {
   --transparent-white: hsla(0, 0%, 100%, 0.75);
   --very-light-gray: hsl(0, 0%, 95%);
 }
+
 body {
   font-family: 'Lexend Deca', sans-serif;
   font-size: 15px;
@@ -103,13 +104,16 @@ body {
   overflow: hidden;
   max-width: 920px;
 }
+
 .card {
   padding: 3rem;
   color: var(--transparent-white);
 }
+
 .card img {
   padding: 0 0 0 0;
 }
+
 .card-title {
   text-transform: uppercase;
   font-family: 'Big Shoulders Display', cursive;
@@ -120,6 +124,8 @@ body {
 }
 
 .card-btn {
+  display: inline-block;
+  text-decoration: none;
   background-color: var(--very-light-gray);
   border: none;
   border-radius: 1.5rem;
@@ -154,6 +160,7 @@ body {
 .variant {
   background-color: var(--very-dark-cyan);
 }
+
 .text-variant {
   color: var(--very-dark-cyan);
 }
@@ -162,6 +169,7 @@ body {
   .container {
     flex-direction: row;
   }
+
   .card-btn {
     margin-top: 6.2rem;
   }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Interactive pricing component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="heading-bg">
+      <img src="images/pattern-circles.svg" alt="" aria-hidden="true" />
+      <div class="heading-title">
+        <h1 class="title">Simple, traffic-based pricing</h1>
+        <p class="copy">Sign-up for our 30-day trial. No credit card required.</p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-selection">
+        <p class="reviews">100K PAGEVIEWS</p>
+        <label><input type="range" min="0" max="100" value="50" step="10" class="slider"></label>
+        <p class="price">
+          <span class="quantity">$16.00 </span>/ month
+        </p>
+      </div>
+      <div class="card-discount">
+        <p>Monthly Billing</p>
+        <label for="toggle" class="switch">
+          <input type="checkbox" id="toggle">
+          <span class="toggle round"></span>
+        </label>
+        <p>Yearly Billing<span class="discount">25% discount</span></p>
+      </div>
+      <hr class="divider" />
+      <div class="card-trial">
+        <ul class="trial-list space-y-4">
+          <li class="trial-list-item">Unlimited websites</li>
+          <li class="trial-list-item">100% data ownership</li>
+          <li class="trial-list-item">Email reports</li>
+        </ul>
+        <a href="#" class="trial-btn">Start my trial</a>
+      </div>
+    </div>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>

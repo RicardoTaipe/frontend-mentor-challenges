@@ -96,6 +96,7 @@ body {
   font-size: 15px;
   font-weight: 400;
 }
+
 .card {
   background-color: var(--dark-blue);
   width: 88%;
@@ -121,6 +122,7 @@ body {
   color: var(--white);
   letter-spacing: 0.04rem;
 }
+
 .card-rating {
   display: flex;
   justify-content: space-between;
@@ -128,6 +130,7 @@ body {
   margin-top: 1.75rem;
   margin-bottom: 1.2rem;
 }
+
 .rating-choice {
   flex: 1;
   text-align: center;
@@ -143,6 +146,7 @@ body {
   color: var(--white);
   background-color: var(--light-grey);
 }
+
 .card-copy {
   color: var(--medium-grey);
   margin-top: 0.8rem;
@@ -167,6 +171,7 @@ body {
   background-color: var(--white);
   color: var(--orange);
 }
+
 .selected {
   background-color: var(--orange);
   color: var(--white);
@@ -178,6 +183,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .card-result {
   color: var(--orange);
   background-color: var(--dark-blue-alt);
@@ -191,25 +197,100 @@ body {
 .text-center {
   text-align: center;
 }
+
 .hide {
   display: none;
+}
+
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  margin-left: -125px;
+  background-color: var(--dark-blue);
+  color: var(--orange);
+  text-align: center;
+  border-radius: 2px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 17px;
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @media only screen and (min-width: 376px) {
   .card-title {
     font-size: 1.75rem;
   }
+
   .card-icon {
     margin-bottom: 1.1rem;
   }
+
   .card {
     padding: 2rem;
   }
+
   .card-rating {
     gap: 1.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
   .rating-choice {
     padding: 0.75rem;
   }
