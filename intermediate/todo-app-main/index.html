@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <title>Frontend Mentor | Todo app</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            grayish: {
+              50: '#FAFAFA',
+              100: '#E4E5F1',
+              200: '#D2D3DB',
+              300: '#9394A5',
+              400: '#484B6A',
+            },
+            blueish: {
+              50: '#CACDE8',
+              100: '#E4E5F1',
+              200: '#777A92',
+              300: '#4D5066',
+              400: '#393A4C',
+              500: '#25273C',
+              600: '#161722',
+            },
+            crayola: '#3A7BFD',
+          },
+          backgroundImage: {
+            'check': "url('images/icon-check.svg'), linear-gradient(45deg, #57DDFF, #C058F3)",
+          },
+          backgroundSize: {
+            '100%': '100%',
+          },
+          fontFamily: {
+            josefin: ['"Josefin Sans"', 'sans-serif'],
+          },
+        },
+      },
+      darkMode: 'class',
+    };
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+    .bg-brand-gradient {
+      @apply bg-check bg-no-repeat bg-center bg-auto;
+    }
+  }
+  </style>
+</head>
+
+<body class="bg-[url('images/bg-mobile-light.jpg')] md:bg-[url('images/bg-desktop-light.jpg')] dark:bg-[url('images/bg-mobile-dark.jpg')] dark:md:bg-[url('images/bg-desktop-dark.jpg')]
+  bg-no-repeat bg-100% bg-grayish-100 flex justify-center min-h-screen dark:bg-blueish-600 font-josefin">
+  <main class="container mx-auto w-[88%] max-w-[34rem] mt-12 md:mt-20">
+    <section class="flex items-center justify-between mb-8 text-grayish-50">
+      <h1 class="font-bold text-2xl tracking-[0.875rem] md:text-4xl">TODO</h1>
+      <img src="images/icon-sun.svg" alt="theme mode" class="w-5 dark-mode" />
+    </section>
+    <div class="bg-grayish-50 dark:bg-blueish-500 rounded-md flex items-center w-full overflow-hidden
+    px-5 py-3.5 text-xs md:text-lg tracking-tight mb-4 md:mb-8">
+      <input type="checkbox" name=""
+        class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+      <input type=" text" name="" id="" class="flex-1 ml-3 focus:outline-none bg-inherit"
+        placeholder="Create a new todo..." />
+    </div>
+    <section class="text-xs tracking-tight md:text-lg text-grayish-400 dark:text-blueish-50">
+      <div class="divide-y bg-grayish-50 dark:bg-blueish-500 rounded-t-md divide-grayish-100 dark:divide-blueish-400">
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">Complete online JavaScript course</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" />
+        </div>
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">Jog around the park 3x</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" class="w-3" />
+        </div>
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">10 minutes meditation</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" />
+        </div>
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">Read for 1 hour</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" />
+        </div>
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">Pick up groceries</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" />
+        </div>
+        <div class="flex justify-between items-center px-5 py-3.5 md:py-4">
+          <input type="checkbox" name=""
+            class="bg-inherit border-grayish-200 dark:border-blueish-400 p-2.5 rounded-full checked:bg-brand-gradient focus:ring-0 focus:ring-offset-0" />
+          <p class="flex-1 ml-3">Complete Todo App on Frontend Mentor</p>
+          <img src="images/icon-cross.svg" alt="remove" class="w-3" />
+        </div>
+      </div>
+      <div class="flex flex-wrap border-t md:flex-nowrap rounded-b-md border-grayish-100 dark:border-blueish-400">
+        <div
+          class="flex-1 bg-grayish-50 dark:bg-blueish-500 rounded-bl-md pl-5 py-3.5 text-grayish-300 dark:text-blueish-300 md:py-4">
+          5 items left</div>
+        <div
+          class="order-last md:order-none flex w-full md:flex-1 items-center 
+          justify-center rounded-md bg-grayish-50 dark:bg-blueish-500 mt-4 md:mt-0 space-x-4 text-grayish-300 dark:text-blueish-300 font-bold py-3.5 md:py-4">
+          <div class="text-crayola">All</div>
+          <div>Active</div>
+          <div>Completed</div>
+        </div>
+        <div
+          class="flex-1 bg-grayish-50 dark:bg-blueish-500 rounded-br-md text-end text-grayish-300 dark:text-blueish-300 pr-5 py-3.5 md:py-4">
+          Clear
+          Completed</div>
+      </div>
+    </section>
+    <footer class="mt-10 text-xs text-center text-grayish-300 dark:text-blueish-300">Drag and drop to reorder list
+    </footer>
+  </main>
+  <script src="index.js"></script>
+</body>
+
+</html>
