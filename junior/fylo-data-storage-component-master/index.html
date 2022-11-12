@@ -18,6 +18,7 @@
 
   <main class="container">
     <div class="card-logo">
+      <h1 class="sr-only">Fylo</h1>
       <img src="images/logo.svg" alt="" aria-hidden="true" class="logo">
       <div class="logo-actions">
         <div class="logo-actions-item">
@@ -33,7 +34,8 @@
     </div>
     <div class="card-storage">
       <p>You've used <span class="used-storage">815 GB</span> of your storage</p>
-      <input type="range" name="" min="0" max="1000" step="1" value="500" class="slider">
+      <label for="progress"></label>
+      <input type="range" name="slider" min="0" max="1000" step="1" value="500" class="slider" id="progress">
       <span class="initial-storage">0 GB</span>
       <span class="final-storage">1000 GB</span>
       <div class="left-storage">
