@@ -78,6 +78,7 @@ select {
 /********* END RESET CSS **************/
 
 :root {
+  --white: hsl(0, 0%, 100%);
   --pale-blue: hsl(243, 100%, 93%);
   --grayish-blue: hsl(229, 7%, 55%);
   --dark-blue: hsl(228, 56%, 26%);
@@ -209,7 +210,7 @@ input[type='range']::-moz-range-track {
 
 .left-storage {
   position: absolute;
-  background-color: var(--pale-blue);
+  background-color: var(--white);
   color: var(--grayish-blue);
   width: 50%;
   left: 50%;
@@ -232,17 +233,20 @@ input[type='range']::-moz-range-track {
   body {
     background-image: url(images/bg-desktop.png);
     background-position: bottom;
+    background-size: 100% 54%;
   }
 
   .container {
     flex-direction: row;
     align-items: flex-end;
     gap: 2rem;
+    transform: translateY(-1rem);
   }
   .card-logo {
     flex: 1.75;
   }
   .card-storage {
+    text-align: start;
     flex: 3;
     padding: 2rem;
   }
@@ -261,6 +265,6 @@ input[type='range']::-moz-range-track {
     transform: translateY(-50%);
     border-width: 1.5rem;
     border-style: solid;
-    border-color: transparent var(--pale-blue) transparent transparent;
+    border-color: transparent var(--white) transparent transparent;
   }
 }
