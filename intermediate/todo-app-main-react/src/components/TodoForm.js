@@ -15,7 +15,6 @@ export default function TodoForm({ onSubmit }) {
 
   useEffect(() => {
     const keyDownHandler = (event) => {
-      event.preventDefault();
       if (event.key === 'Enter') {
         if (!input || /^\s*$/.test(input)) {
           return;

@@ -2,7 +2,7 @@ const data = [
   {
     id: '89ce728a-3110-4817-ac18-1a841471511c',
     description: 'Complete online JavaScript course',
-    completed: false,
+    completed: true,
   },
   {
     id: 'b2c4c3f2-94c4-493c-a29c-5a326c98297f',
