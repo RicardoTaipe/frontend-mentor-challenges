@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.d06262ee.css",
-    "main.js": "/static/js/main.5ea6f9cd.js",
-    "static/js/787.b9bef666.chunk.js": "/static/js/787.b9bef666.chunk.js",
-    "static/media/bg-desktop-light.jpg": "/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
-    "static/media/bg-desktop-dark.jpg": "/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
-    "index.html": "/index.html",
-    "static/media/icon-sun.svg": "/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
-    "static/media/icon-moon.svg": "/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
-    "static/media/icon-cross.svg": "/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
-    "static/media/icon-check.svg": "/static/media/icon-check.a8fb15d0278c8e312df5.svg",
-    "main.d06262ee.css.map": "/static/css/main.d06262ee.css.map",
-    "main.5ea6f9cd.js.map": "/static/js/main.5ea6f9cd.js.map",
-    "787.b9bef666.chunk.js.map": "/static/js/787.b9bef666.chunk.js.map"
+    "main.css": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/css/main.2d264445.css",
+    "main.js": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/js/main.8493497b.js",
+    "static/js/787.b9bef666.chunk.js": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/js/787.b9bef666.chunk.js",
+    "static/media/bg-desktop-light.jpg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/bg-desktop-light.3508d620efd5a52bb4ce.jpg",
+    "static/media/bg-desktop-dark.jpg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/bg-desktop-dark.73e47dbb723ebc772ef0.jpg",
+    "index.html": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/index.html",
+    "static/media/icon-sun.svg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/icon-sun.910b1f9a23741afc341e95653a51f14f.svg",
+    "static/media/icon-moon.svg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/icon-moon.6c03114b495d05f4380b3c544d9afe2a.svg",
+    "static/media/icon-cross.svg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/icon-cross.6ee81d30b75cab19d6f7314624fcc4d6.svg",
+    "static/media/icon-check.svg": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/media/icon-check.a8fb15d0278c8e312df5.svg",
+    "main.2d264445.css.map": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/css/main.2d264445.css.map",
+    "main.8493497b.js.map": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/js/main.8493497b.js.map",
+    "787.b9bef666.chunk.js.map": "/frontend-mentor-challenges/intermediate/todo-app-main-react/build/static/js/787.b9bef666.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d06262ee.css",
-    "static/js/main.5ea6f9cd.js"
+    "static/css/main.2d264445.css",
+    "static/js/main.8493497b.js"
   ]
 }
