@@ -29,7 +29,7 @@ function App() {
   };
 
   return (
-    <main className="container mx-auto w-[88%] max-w-[34rem] mt-12 md:mt-0">
+    <main className="mx-auto w-[88%] max-w-[34rem] mt-12 md:mt-0">
       <TodoForm onSubmit={addTodo} />
       <section className="text-xs tracking-tight md:text-lg text-grayish-400 dark:text-blueish-50">
         <TodoList
