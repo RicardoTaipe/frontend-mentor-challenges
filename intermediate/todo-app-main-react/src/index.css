@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .bg-brand-gradient {
+    @apply bg-check bg-no-repeat bg-center bg-auto;
+  }
+}
