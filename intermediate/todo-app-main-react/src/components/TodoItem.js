@@ -5,7 +5,7 @@ export default function TodoItem({ item }) {
     <div className="flex justify-between items-center px-5 py-3.5 md:py-[18px]">
       <label htmlFor="completed"></label>
       <input
-        checked={item.completed}
+        defaultChecked={item.completed}
         type="checkbox"
         id="completed"
         name=""
