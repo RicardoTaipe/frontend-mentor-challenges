@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -79,6 +79,7 @@ select {
 :root {
   --softsblue: hsl(215, 51%, 70%);
   --cyan: hsl(178, 100%, 50%);
+  --transparent-cyan: hsla(178, 100%, 50%, 0.5);
 
   --very-dark-blue: hsl(217, 54%, 11%);
   --very-dark-blue-p: hsl(216, 50%, 16%);
@@ -91,7 +92,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
   font-weight: 300;
   font-size: 18px;
   background-color: var(--very-dark-blue);
@@ -108,15 +109,33 @@ body {
   padding: 1.25rem;
   color: var(--softsblue);
 }
+
 .card__container {
   border-radius: 0.85rem;
   overflow: hidden;
+  position: relative;
 }
+
+.card__back {
+  background-color: var(--transparent-cyan);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  transition: all 0.5s;
+}
+
 .card__title {
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: var(--white);
-  font-size: 20px;
+  font-size: 24px;
   font-weight: 600;
+}
+
+.card_header {
+  margin-block: 1rem;
 }
 
 .card__description {
@@ -129,14 +148,20 @@ body {
   flex: 1;
 }
 
+.card__ethereum {
+  color: var(--cyan);
+}
+
 .card__icon {
+  display: inline;
   vertical-align: middle;
-  float: left;
+  padding-right: 0.25rem;
 }
 
 .card__line {
   width: 100%;
   border: 0.8px solid var(--very-dark-blue-s);
+  margin-block: 0.75rem;
 }
 
 .card__footer {
@@ -146,16 +171,29 @@ body {
 
 .card__copy {
   flex: 1;
-  margin-left: 1rem;
+  margin-left: 0.75rem;
 }
 
 .card__avatar {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
   border: 2px solid var(--white);
 }
+
 .card__user {
   color: var(--white);
   font-weight: 400;
+}
+
+@media (hover: hover) {
+  .card--highlight:hover,
+  .card--highlight:focus {
+    color: var(--cyan);
+    cursor: pointer;
+  }
+  .card__container:hover .card__back,
+  .card__container:focus .card__back {
+    z-index: 2;
+  }
 }

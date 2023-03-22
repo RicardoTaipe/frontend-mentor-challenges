@@ -1,47 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | NFT preview card component</title>
+  </head>
 
-  <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | NFT preview card component</title>
+  <body>
+    <main class="card">
+      <div class="card__container">
+        <img src="images/image-equilibrium.jpg" alt="" />
+        <div class="card__back">
+          <img src="images/icon-view.svg" alt="" />
+        </div>
+      </div>
+      <h1 class="card__title card--highlight">Equilibrium #3429</h1>
+      <p class="card_header">
+        Our Equilibrium collection promotes balance and calm.
+      </p>
+      <div class="card__description">
+        <p class="card__ethereum">
+          <img class="card__icon" src="images/icon-ethereum.svg" alt="" /> 0.041
+          ETH
+        </p>
+        <p>
+          <img class="card__icon" src="images/icon-clock.svg" alt="" />3 days
+          left
+        </p>
+      </div>
 
-
-</head>
-
-<body>
-  <main class="card">
-    <div class="card__container">
-      <img src="images/image-equilibrium.jpg" alt="">
-    </div>
-    <h1 class="card__title">Equilibrium #3429</h1>
-    <p>Our Equilibrium collection promotes balance and calm. </p>
-    <div class="card__description">
-      <div><img class="card__icon" src="images/icon-ethereum.svg" alt=""> 0.041 ETH</div>
-      <div><img class="card__icon" src="images/icon-clock.svg" alt="">3 days left</div>
-    </div>
-
-    <hr class="card__line" />
-    <div class=" card__footer">
-      <img class="card__avatar" src="images/image-avatar.png" alt="">
-      <p class="card__copy">Creation of <span class="card__user">Jules Wyvern</span></p>
-    </div>
-  </main>
-
-
-
-
-
-
-</body>
-
+      <hr class="card__line" />
+      <div class="card__footer">
+        <img class="card__avatar" src="images/image-avatar.png" alt="" />
+        <p class="card__copy">
+          Creation of
+          <span class="card__user card--highlight">Jules Wyvern</span>
+        </p>
+      </div>
+    </main>
+  </body>
 </html>
