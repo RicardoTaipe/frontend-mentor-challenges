@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Results summary component</title>
+</head>
+
+<body>
+  <main class="container">
+    <section class="card card--featured">
+      <p class="card__title">Your Result</p>
+      <div class="result__badge">
+        <p class="result__value">76</p>
+        <span>of 100</span>
+      </div>
+      <p class="result__label">Great</p>
+      <p class="result__copy">You scored higher than 65% of the people who have taken these tests.</p>
+    </section>
+    <section class="card">
+      <p class="card__title card__title--start">Summary</p>
+      <div class="summary__categories space-y-4">
+        <div class="category category--red">
+          <img src="assets/images/icon-reaction.svg" alt="">
+          <p class="category__title category__title--red">Reaction</p>
+          <p> <span class="category__percentage">80</span> / 100</p>
+        </div>
+
+        <div class="category category--yellow">
+          <img src="assets/images/icon-memory.svg" alt="">
+          <p class="category__title category__title--yellow">Memory</p>
+          <p> <span class="category__percentage">92</span> / 100</p>
+        </div>
+
+        <div class="category category--green">
+          <img src="assets/images/icon-verbal.svg" alt="">
+          <p class="category__title category__title--green">Verbal</p>
+          <p> <span class="category__percentage">61</span> / 100</p>
+        </div>
+
+        <div class="category category--blue">
+          <img src="assets/images/icon-visual.svg" alt="">
+          <p class="category__title category__title--blue">Visual</p>
+          <p> <span class="category__percentage">72</span> / 100</p>
+        </div>
+
+      </div>
+      <a href="#" class="summary__btn">Continue</a>
+    </section>
+  </main>
+</body>
+
+</html>
