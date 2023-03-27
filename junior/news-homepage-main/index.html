@@ -34,32 +34,47 @@
               200: "hsl(240, 100%, 5%)",
             },
           },
+          extend: {
+            backgroundImage: {
+              "menu-close": "url('./assets/images/icon-menu-close.svg')",
+              menu: "url('./assets/images/icon-menu.svg')",
+            },
+            boxShadow: {
+              "3xl": "-157px 0px 185px 150px rgba(0,0,0,0.5)",
+            },
+          },
         },
       };
     </script>
     <title>Frontend Mentor | News homepage</title>
   </head>
-  <body class="font-inter font-normal text-base bg-white text-blue-100">
+  <body
+    class="font-inter font-normal text-base bg-white text-blue-100 overflow-x-hidden"
+  >
     <nav
-      class="mx-auto w-11/12 md:max-w-[1108px] pt-8 pb-4 flex justify-between items-center relative"
+      class="mx-auto w-11/12 md:max-w-[1108px] pt-8 pb-4 flex justify-between items-center md:py-16"
     >
       <img src="assets/images/logo.svg" alt="" />
-      <ul
-        class="md:space-x-7 md:block absolute right-0 top-full md:relative z-10 flex flex-col bg-white w-full"
+      <button
+        class="mobile-nav-toggle absolute aspect-square top-8 right-8 z-50 md:hidden border-0 bg-menu w-8 bg-no-repeat bg-center aria-expanded:bg-menu-close"
+        aria-controls="navigation"
+        aria-expanded="false"
       >
-        <a href="#" class="hover:text-red">Home</a>
-        <a href="" class="hover:text-red">New</a>
-        <a href="#" class="hover:text-red">Popular</a>
-        <a href="#" class="hover:text-red">Trending</a>
-        <a href="#" class="hover:text-red">Categories</a>
-        <a href="#" class="hover:text-red">New</a>
-      </ul>
-      <button class="md:hidden">
-        <img src="assets/images/icon-menu.svg" alt="" />
+        <span class="sr-only">Menu</span>
       </button>
+      <ul
+        data-visible="false"
+        class="navigation transition-transform flex fixed left-1/3 top-0 right-0 bottom-0 z-10 translate-x-full bg-white md:static flex-col md:flex-row pt-[10rem] pl-[2rem] md:p-0 gap-8 md:translate-x-0 data-[visible=true]:translate-x-0 data-[visible=true]:shadow-3xl"
+      >
+        <li><a href="#" class="hover:text-red">Home</a></li>
+        <li><a href="" class="hover:text-red">New</a></li>
+        <li><a href="#" class="hover:text-red">Popular</a></li>
+        <li><a href="#" class="hover:text-red">Trending</a></li>
+        <li><a href="#" class="hover:text-red">Categories</a></li>
+      </ul>
     </nav>
     <main
-      class="mx-auto w-11/12 md:max-w-[1108px] grid grid-cols-1 grid-flow-row-dense gap-8 md:grid-cols-3 md:auto-rows-max"
+      class="mx-auto w-11/12 md:max-w-[1108px] grid grid-cols-1 grid-flow-row-dense gap-8 md:grid-cols-3 md:auto-rows-max mb-16"
     >
       <picture class="md:col-span-2 object-cover w-full">
         <source
@@ -118,7 +133,7 @@
       </div>
       <div class="w-full flex">
         <img src="assets/images/image-retro-pcs.jpg" alt="" class="w-[30%]" />
-        <div class="w-9/12">
+        <div class="pl-4">
           <span class="text-blue-50 font-bold text-3xl">01</span>
           <a
             href="#"
@@ -131,7 +146,7 @@
       </div>
       <div class="w-full flex">
         <img src="assets/images/image-top-laptops.jpg" alt="" class="w-[30%]" />
-        <div>
+        <div class="pl-4">
           <span class="text-blue-50 font-bold text-3xl">02</span>
           <a
             href="#"
@@ -147,7 +162,7 @@
           alt=""
           class="w-[30%]"
         />
-        <div>
+        <div class="pl-4">
           <span class="text-blue-50 font-bold text-3xl">03</span>
           <a
             href="#"
@@ -159,5 +174,6 @@
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
