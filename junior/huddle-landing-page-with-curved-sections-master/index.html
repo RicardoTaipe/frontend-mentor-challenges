@@ -42,8 +42,10 @@
               "pattern-curve": "url('./images/pattern-curve.svg')",
               "pattern-bg": "url('./images/pattern-bg.svg')",
               "pattern-quotes": "url('./images/pattern-quotes.svg')",
-              "section-top-1": "url('./images/pattern-quotes.svg')",
-              "section-top-2": "url('./images/pattern-quotes.svg')",
+              "section-top-1-mobile":
+                "url('./images/bg-section-top-mobile-1.svg')",
+              "section-top-1-desktop":
+                "url('./images/bg-section-top-mobile-1.svg')",
             },
             boxShadow: {
               "3xl": "-157px 0px 185px 150px rgba(0,0,0,0.5)",
@@ -52,6 +54,13 @@
         },
       };
     </script>
+    <style type="text/tailwindcss">
+      @layer components {
+        .top-curve {
+          @apply before:top-0 relative before:bg-section-top-1-sm before:md:bg-section-top-1-md before:w-full before:h-[112px] before:-translate-y-full before:absolute before:bg-no-repeat before:bg-[size:100%];
+        }
+      }
+    </style>
   </head>
   <body class="font-sans">
     <header
@@ -115,16 +124,8 @@
       </div>
     </main>
     <section
-      class="text-cyan flex flex-col md:flex-row text-center items-center bg-blue mb-32"
+      class="text-cyan flex flex-col md:flex-row text-center items-center bg-red mb-32 before:top-0 relative before:bg-[url('images/bg-section-top-mobile-1.svg')] before:md:bg-[url('images/bg-section-top-desktop-1.svg')] before:w-full before:h-[112px] before:-translate-y-full before:absolute before:bg-no-repeat before:bg-[size:100%] after:content-[' '] after:bottom-0 after:bg-[url('images/bg-section-bottom-mobile-1.svg')] after:md:bg-[url('images/bg-section-bottom-desktop-1.svg')] after:w-full after:h-[52px] after:translate-y-full after:absolute after:bg-no-repeat after:bg-[size:100%]"
     >
-      <picture class="-translate-y-full relative left-0">
-        <source
-          media="(min-width: 376px)"
-          srcset="images/bg-section-top-desktop-1.svg"
-        />
-        <img src="images/bg-section-top-mobile-1.svg" alt="" />
-      </picture>
-
       <img src="images/illustration-grow-together.svg" alt="" class="w-3/4" />
       <div class="w-10/12">
         <h2 class="font-poppins font-bold">Grow Together</h2>
@@ -134,13 +135,6 @@
           with a feedback form.
         </p>
       </div>
-      <picture class="translate-y-full">
-        <source
-          media="(min-width: 376px)"
-          srcset="images/bg-section-bottom-desktop-1.svg"
-        />
-        <img src="images/bg-section-bottom-mobile-1.svg" alt="" />
-      </picture>
     </section>
     <!--     Flowing Conversations You wouldn't paginate a conversation in
     real life, so why do it online? Our threads have just-in-time loading for a
