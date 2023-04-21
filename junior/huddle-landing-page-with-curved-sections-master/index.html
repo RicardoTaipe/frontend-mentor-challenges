@@ -39,13 +39,14 @@
           },
           extend: {
             backgroundImage: {
-              "pattern-curve": "url('./images/pattern-curve.svg')",
-              "pattern-bg": "url('./images/pattern-bg.svg')",
-              "pattern-quotes": "url('./images/pattern-quotes.svg')",
               "section-top-1-mobile":
                 "url('./images/bg-section-top-mobile-1.svg')",
               "section-top-1-desktop":
-                "url('./images/bg-section-top-mobile-1.svg')",
+                "url('./images/bg-section-top-desktop-1.svg')",
+              "section-bottom-1-mobile":
+                "url('./images/bg-section-bottom-mobile-1.svg')",
+              "section-bottom-1-desktop":
+                "url('./images/bg-section-bottom-desktop-1.svg')",
             },
             boxShadow: {
               "3xl": "-157px 0px 185px 150px rgba(0,0,0,0.5)",
@@ -57,7 +58,10 @@
     <style type="text/tailwindcss">
       @layer components {
         .top-curve {
-          @apply before:top-0 relative before:bg-section-top-1-sm before:md:bg-section-top-1-md before:w-full before:h-[112px] before:-translate-y-full before:absolute before:bg-no-repeat before:bg-[size:100%];
+          @apply before:top-0 before:bg-section-top-1-mobile before:md:bg-section-top-1-desktop before:w-full before:h-[112px] before:-translate-y-full before:absolute before:bg-no-repeat before:bg-[size:100%];
+        }
+        .bottom-curve {
+          @apply after:bottom-0 after:bg-section-bottom-1-mobile after:md:bg-section-bottom-1-desktop after:w-full after:h-[52px] after:translate-y-full after:absolute after:bg-no-repeat after:bg-[size:100%];
         }
       }
     </style>
@@ -124,7 +128,7 @@
       </div>
     </main>
     <section
-      class="text-cyan flex flex-col md:flex-row text-center items-center bg-red mb-32 before:top-0 relative before:bg-[url('images/bg-section-top-mobile-1.svg')] before:md:bg-[url('images/bg-section-top-desktop-1.svg')] before:w-full before:h-[112px] before:-translate-y-full before:absolute before:bg-no-repeat before:bg-[size:100%] after:content-[' '] after:bottom-0 after:bg-[url('images/bg-section-bottom-mobile-1.svg')] after:md:bg-[url('images/bg-section-bottom-desktop-1.svg')] after:w-full after:h-[52px] after:translate-y-full after:absolute after:bg-no-repeat after:bg-[size:100%]"
+      class="text-cyan flex flex-col md:flex-row text-center items-center bg-blue mb-32 relative top-curve bottom-curve"
     >
       <img src="images/illustration-grow-together.svg" alt="" class="w-3/4" />
       <div class="w-10/12">
