@@ -19,8 +19,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -128,10 +127,12 @@
       </div>
     </main>
     <section
-      class="text-cyan flex flex-col md:flex-row text-center items-center bg-blue mb-32 relative top-curve bottom-curve"
+      class="text-cyan flex flex-col text-center items-center bg-blue mb-32 relative top-curve bottom-curve py-16 md:flex-row-reverse"
     >
-      <img src="images/illustration-grow-together.svg" alt="" class="w-3/4" />
-      <div class="w-10/12">
+      <div class="flex-1">
+        <img src="images/illustration-grow-together.svg" alt="" />
+      </div>
+      <div class="flex-1">
         <h2 class="font-poppins font-bold">Grow Together</h2>
         <p class="text-sm font-semibold">
           Generate meaningful discussions with your audience and build a strong,
