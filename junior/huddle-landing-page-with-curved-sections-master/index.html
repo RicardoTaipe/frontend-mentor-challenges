@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Huddle landing page with curved sections</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Open Sans", "sans-serif"],
+            poppins: ["Poppins", "sans-serif"],
+          },
+          colors: {
+            cyan: "hsl(192, 100%, 9%)",
+            blue: "hsl(207, 100%, 98%)",
+            pink: {
+              50: "hsl(321, 100%, 78%)",
+              100: "hsl(322, 100%, 66%)",
+            },
+            red: "hsl(0, 100%, 63%)",
+          },
+          extend: {
+            backgroundImage: {
+              "pattern-curve": "url('./images/pattern-curve.svg')",
+              "pattern-bg": "url('./images/pattern-bg.svg')",
+              "pattern-quotes": "url('./images/pattern-quotes.svg')",
+              "section-top-1": "url('./images/pattern-quotes.svg')",
+              "section-top-2": "url('./images/pattern-quotes.svg')",
+            },
+            boxShadow: {
+              "3xl": "-157px 0px 185px 150px rgba(0,0,0,0.5)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-sans">
+    <header
+      class="flex justify-between items-center mx-auto md:max-w-[1280px] md:w-full w-[88%] mt-6 md:mt-[4.75rem]"
+    >
+      <img src="images/logo.svg" alt="logo" class="md:w-[235px]" width="100" />
+      <a
+        href="#"
+        class="border rounded-full border-pink-100 text-pink-100 text-xs md:text-base px-3 md:px-8 py-1"
+        >Try it Free</a
+      >
+    </header>
+    <main
+      class="text-center text-cyan mt-[7.25rem] w-[80%] mx-auto tracking-wide md:mt-60"
+    >
+      <h1 class="font-poppins font-bold text-2xl md:text-5xl">
+        Build The Community Your Fans Will Love
+      </h1>
+      <p
+        class="text-sm mt-7 md:mt-10 mb-9 md:mb-20 md:text-lg md:w-[52%] md:mx-auto"
+      >
+        Huddle re-imagines the way we build communities. You have a voice, but
+        so does your audience. Create connections with your users as you engage
+        in genuine discussion.
+      </p>
+      <a
+        href="#"
+        class="rounded-full font-bold bg-pink-100 px-9 py-3 text-blue text-xs md:text-lg md:px-24 md:py-6"
+        >Get Started For Free</a
+      >
+      <img
+        src="images/screen-mockups.svg"
+        alt="screen mockups"
+        class="mt-[7rem] md:mt-32 mx-auto"
+      />
+      <div
+        class="flex flex-col items-center my-28 gap-24 md:flex-row md:justify-center md:gap-0"
+      >
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <div class="text-center">
+            <img
+              src="images/icon-communities.svg"
+              alt="communities"
+              class="md:w-[4rem]"
+            />
+            <p class="text-6xl font-bold md:text-8xl">1.4k+</p>
+            <p class="text-sm md:text-xl mt-4 md:mt-8">Communities Formed</p>
+          </div>
+        </div>
+        <div class="flex-1 flex flex-col items-center justify-center">
+          <div class="text-center">
+            <img
+              src="images/icon-messages.svg"
+              alt="messges"
+              class="md:w-[4rem]"
+            />
+            <p class="text-6xl font-bold md:text-8xl">2.7m+</p>
+            <p class="text-sm md:text-xl mt-4 md:mt-8">Messages Sent</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section
+      class="text-cyan flex flex-col md:flex-row text-center items-center bg-blue mb-32"
+    >
+      <picture class="-translate-y-full relative left-0">
+        <source
+          media="(min-width: 376px)"
+          srcset="images/bg-section-top-desktop-1.svg"
+        />
+        <img src="images/bg-section-top-mobile-1.svg" alt="" />
+      </picture>
+
+      <img src="images/illustration-grow-together.svg" alt="" class="w-3/4" />
+      <div class="w-10/12">
+        <h2 class="font-poppins font-bold">Grow Together</h2>
+        <p class="text-sm font-semibold">
+          Generate meaningful discussions with your audience and build a strong,
+          loyal community. Think of the insightful conversations you miss out on
+          with a feedback form.
+        </p>
+      </div>
+      <picture class="translate-y-full">
+        <source
+          media="(min-width: 376px)"
+          srcset="images/bg-section-bottom-desktop-1.svg"
+        />
+        <img src="images/bg-section-bottom-mobile-1.svg" alt="" />
+      </picture>
+    </section>
+    <!--     Flowing Conversations You wouldn't paginate a conversation in
+    real life, so why do it online? Our threads have just-in-time loading for a
+    more natural flow. Your Users It takes no time at all to integrate Huddle
+    with your app's authentication solution. This means, once signed in to your
+    app, your users can start chatting immediately. Ready To Build Your
+    Community? Get Started For Free Lorem ipsum dolor sit amet, consectetur
+    adipiscing elit. Mauris nulla quam, hendrerit lacinia vestibulum a, ultrices
+    quis sem. Phone: +1-543-123-4567 example@huddle.com Newsletter To recieve
+    tips on how to grow your community, sign up to our weekly newsletter. We’ll
+    never send you spam or pass on your email address Subscribe -->
+  </body>
+</html>
