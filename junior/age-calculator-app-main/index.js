@@ -7,59 +7,57 @@ const yearText = document.querySelector("label[for=year]");
 const daysResult = document.querySelector("#days-result");
 const monthsResult = document.querySelector("#months-result");
 const yearsResult = document.querySelector("#years-result");
-
-function isValid(min, max, value) {
-  return value >= min && value <= max;
-}
-
 const form = document.getElementById("form");
+
+const isValidRange = (min, max, value) => value >= min && value <= max;
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   const { day: dayInput, month: monthInput, year: yearInput } = form;
 
-  highlightError(dayError, dayText, dayInput, {
+  validateInputField(dayError, dayText, dayInput, {
     "The field is required": dayInput.value,
-    "Must be a valid day": isValid(1, 31, dayInput.value),
+    "Must be a valid day": isValidRange(1, 31, dayInput.value),
   });
 
-  highlightError(monthError, monthText, monthInput, {
+  validateInputField(monthError, monthText, monthInput, {
     "The field is required": monthInput.value,
-    "Must be a month": isValid(1, 12, monthInput.value),
+    "Must be a month": isValidRange(1, 12, monthInput.value),
   });
 
-  highlightError(yearError, yearText, yearInput, {
+  validateInputField(yearError, yearText, yearInput, {
     "The field is required": yearInput.value,
     "Must be in the past": new Date().getFullYear() >= Number(yearInput.value),
   });
+
   if (yearInput.value && monthInput.value && dayInput.value) {
     showResult(`${yearInput.value}-${monthInput.value}-${dayInput.value}`);
   }
 });
 
 function showResult(date) {
-  const now = moment(); //todays date
-  const end = moment(date); // another date
-  const duration = moment.duration(now.diff(end));
-  if (!duration.isValid) {
+  const todayDate = moment(); //todays date
+  const birthdayDate = moment(date);
+  if (!birthdayDate.isValid) {
     showError(dayError, dayText, dayInput, "Must be a valid date");
     showError(monthError, monthText, monthInput, "");
     showError(yearError, yearText, yearInput, "");
     return;
   }
-  yearsResult.innerHTML = duration.years();
-  monthsResult.innerHTML = duration.months();
-  daysResult.innerHTML = duration.days();
+  const diffTime = moment.preciseDiff(birthdayDate, todayDate, true);
+  yearsResult.textContent = diffTime.years;
+  monthsResult.textContent = diffTime.months;
+  daysResult.textContent = diffTime.days;
 }
 
 function showError(error, text, input, message) {
   error.classList.remove("hidden");
-  error.innerHTML = message;
+  error.textContent = message;
   text.classList.add("text-red");
   input.classList.add("border-red");
 }
 
-function highlightError(error, text, input, isValid) {
+function validateInputField(error, text, input, isValid) {
   for (const message in isValid) {
     if (!isValid[message]) {
       showError(error, text, input, message);
