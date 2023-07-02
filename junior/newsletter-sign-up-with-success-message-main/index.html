@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            roboto: ["Roboto", "sans-serif"],
+          },
+          colors: {
+            red: "rgb(255,83,121)",
+            tomato: "hsl(4, 100%, 67%)",
+            white: "hsl(0, 0%, 100%)",
+            gray: {
+              50: "hsl(231, 7%, 60%)",
+              100: "hsl(235, 18%, 26%)",
+              200: "hsl(234, 29%, 20%)",
+            },
+          },
+        },
+      };
+    </script>
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+  </head>
+  <body
+    class="font-roboto bg-gray-100 flex justify-center items-stretch md:items-center min-h-screen"
+  >
+    <!-- Sign-up form start -->
+    <section
+      id="sign-up"
+      class="bg-white flex flex-col-reverse md:flex-row md:rounded-3xl md:max-w-[928px] w-full md:p-6 md:justify-between flex-1 justify-end"
+    >
+      <form
+        novalidate
+        class="flex-1 px-6 py-11 md:pl-10 md:pr-14 md:py-16 flex flex-col justify-between"
+      >
+        <h1 class="font-bold text-4xl md:text-[56px]">Stay updated!</h1>
+        <p class="md:pt-8">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="md:py-8">
+          <li class="flex items-baseline space-x-3">
+            <img src="assets/images/icon-list.svg" alt="" />
+            <p>Product discovery and building what matters</p>
+          </li>
+          <li class="flex items-baseline space-x-3">
+            <img src="assets/images/icon-list.svg" alt="" />
+            <p>Measuring to ensure updates are a success</p>
+          </li>
+          <li class="flex items-baseline space-x-3">
+            <img src="assets/images/icon-list.svg" alt="" />
+            <p>And much more!</p>
+          </li>
+        </ul>
+        <div class="mt-10 md:mt-0">
+          <label for="mail" class="block font-bold text-xs float-left">
+            Email address
+          </label>
+          <span
+            id="email-error"
+            class="text-xs text-tomato float-right font-bold hidden"
+            >Valid email required</span
+          >
+        </div>
+        <input
+          class="rounded-md w-full py-4 px-4 invalid:border-tomato invalid:bg-tomato/20 invalid:text-tomato"
+          type="email"
+          id="mail"
+          required
+          name="mail"
+          placeholder="email@company.com"
+        />
+        <a
+          id="submit"
+          href="#"
+          class="bg-gray-200 block text-white rounded-md text-center py-4 font-bold hover:bg-gradient-to-r hover:from-red hover:to-tomato"
+          >Subscribe to monthly newsletter</a
+        >
+      </form>
+      <div>
+        <picture>
+          <source
+            media="(min-width: 376px)"
+            srcset="assets/images/illustration-sign-up-desktop.svg"
+          />
+          <img
+            src="assets/images/illustration-sign-up-mobile.svg"
+            alt="image"
+          />
+        </picture>
+      </div>
+    </section>
+    <!-- Success message start -->
+    <section
+      id="success-message"
+      class="bg-white md:rounded-3xl md:max-w-[500px] w-full flex-1 p-16 space-y-8 hidden"
+    >
+      <img
+        src="assets/images/icon-success.svg"
+        alt="success"
+        class="flex-none"
+      />
+      <h2 class="font-bold text-4xl md:text-[56px]">Thanks for subscribing!</h2>
+      <p>
+        A confirmation email has been sent to
+        <span class="font-bold">ash@loremcompany.com.</span> Please open it and
+        click the button inside to confirm your subscription.
+      </p>
+      <button
+        class="w-full bg-gray-200 block text-white rounded-md text-center py-4 font-bold hover:bg-gradient-to-r hover:from-red hover:to-tomato"
+      >
+        Dismiss message
+      </button>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
