@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -79,7 +79,7 @@ select {
 
 body {
   font-size: 0.875rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   background-color: hsl(30, 38%, 92%);
   display: flex;
   align-items: center;
@@ -109,7 +109,7 @@ body {
 }
 
 .card-name {
-  font-family: 'Fraunces', sans-serif;
+  font-family: "Fraunces", sans-serif;
   font-weight: 700;
   font-size: 2rem;
   line-height: 2rem;
@@ -125,7 +125,7 @@ body {
 }
 
 .card-discount {
-  font-family: 'Fraunces', sans-serif;
+  font-family: "Fraunces", sans-serif;
   display: inline-block;
   font-size: 2rem;
   margin: 1rem 0;
@@ -179,13 +179,18 @@ body {
 @media only screen and (min-width: 376px) {
   body {
     margin: 0;
+    padding: 0;
   }
   .card {
     flex-direction: row;
     max-width: 600px;
+    align-items: stretch;
+  }
+  .card-image > img {
+    width: 980px;
+    flex: 0 1 auto;
   }
   .card-description {
-    width: 50%;
-    padding: 2.5rem;
+    height: auto;
   }
 }
