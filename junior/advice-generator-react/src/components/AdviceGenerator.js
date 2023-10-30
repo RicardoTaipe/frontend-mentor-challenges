@@ -21,7 +21,7 @@ function AdviceGenerator() {
         />
         <Image src={patternMobile} alt="divider" className="w-full" />
       </picture>
-      <button className="border-none rounded-full bg-neon-green absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 [@media(any-hover:hover){&:hover}]:shadow-3xl">
+      <button className="border-none rounded-full bg-neon-green absolute top-full left-1/2 -translate-x-1/2 -translate-y-1/2 p-5 [@media(any-hover:hover){&:hover}]:shadow-3xl transition-all duration-200">
         <Image src={icon} alt="icon" />
       </button>
     </div>
