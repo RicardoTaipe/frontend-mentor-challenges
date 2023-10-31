@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Manrope } from "next/font/google";
 import AdviceGenerator from "@/components/AdviceGenerator";
 

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import icon from "../../public/images/icon-dice.svg";
-import patternMobile from "../../public/images/pattern-divider-mobile.svg";
+import icon from "../public/images/icon-dice.svg";
+import patternMobile from "../public/images/pattern-divider-mobile.svg";
 
 function AdviceGenerator() {
   const [data, setData] = useState({
