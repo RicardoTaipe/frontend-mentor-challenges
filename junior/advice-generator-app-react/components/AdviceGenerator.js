@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import icon from "../public/images/icon-dice.svg";
 import patternMobile from "../public/images/pattern-divider-mobile.svg";
+import { API_URL } from "@/constants";
 
 function AdviceGenerator() {
   const [data, setData] = useState({
@@ -17,7 +18,7 @@ function AdviceGenerator() {
   const fetchData = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`https://api.adviceslip.com/advice`);
+      const response = await fetch(API_URL);
       const result = await response.json();
       setData(result);
     } catch (error) {
@@ -34,7 +35,10 @@ function AdviceGenerator() {
       <h1 className="text-neon-green text-xs uppercase mb-6 mt-10 md:mt-12">
         Advice # {error ? "" : data.slip.id}
       </h1>
-      <q className="text-light-cyan text-2xl font-extrabold md:text-3xl">
+      <q
+        role="quote"
+        className="text-light-cyan text-2xl font-extrabold md:text-3xl"
+      >
         {message}
       </q>
       <picture className="flex justify-center items-center mt-6 mb-16 md:mt-10 md:mb-14">
