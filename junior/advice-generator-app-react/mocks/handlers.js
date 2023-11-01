@@ -1,7 +1,15 @@
-import { rest } from "msw";
+import { http, HttpResponse } from "msw";
 
 export const handlers = [
-  rest.get("https://api.adviceslip.com/advice", (_req, res, ctx) => {
-    return res(ctx.status(200), ctx.json({ greeting: "hello there" }));
+  http.get("https://api.adviceslip.com/advice", () => {
+    return HttpResponse.json(
+      {
+        slip: {
+          id: 99,
+          advice: "Lorem ipsum quote",
+        },
+      },
+      { status: 200 }
+    );
   }),
 ];
