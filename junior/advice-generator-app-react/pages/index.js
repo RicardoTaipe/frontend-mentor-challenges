@@ -1,5 +1,6 @@
 import { Manrope } from "next/font/google";
-import AdviceGenerator from "@/components/AdviceGenerator";
+import dynamic from "next/dynamic";
+const AdviceGenerator = dynamic(() => import("@/components/AdviceGenerator"));
 
 const manrope = Manrope({ weight: "800", subsets: ["latin"] });
 
