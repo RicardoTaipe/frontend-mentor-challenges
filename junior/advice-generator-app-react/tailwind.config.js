@@ -17,6 +17,12 @@ module.exports = {
       boxShadow: {
         "3xl": "0px 0px 39px 5px hsl(150, 100%, 66%)",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+      },
     },
   },
   plugins: [],

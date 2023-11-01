@@ -14,6 +14,16 @@ function AdviceGenerator() {
   });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const [fadeIn, setFadeIn] = useState(false);
+
+  useEffect(() => {
+    removeAnimation();
+  }, []);
+
+  function removeAnimation() {
+    setFadeIn(true);
+    setTimeout(() => setFadeIn(false), 1000);
+  }
 
   const fetchData = async () => {
     try {
@@ -21,6 +31,7 @@ function AdviceGenerator() {
       const response = await fetch(API_URL);
       const result = await response.json();
       setData(result);
+      removeAnimation();
     } catch (error) {
       setError(error.message);
     } finally {
@@ -28,8 +39,7 @@ function AdviceGenerator() {
     }
   };
 
-  const message = error ?? data.slip.advice;
-
+  const message = error ?? data?.slip?.advice;
   return (
     <div className="text-center relative rounded-2xl w-[540px] max-w-[90%] px-4 bg-dark-grayish-blue md:px-6 md:top-9 -translate-y-12">
       <h1 className="text-neon-green text-xs uppercase mb-6 mt-10 md:mt-12">
@@ -37,7 +47,10 @@ function AdviceGenerator() {
       </h1>
       <q
         role="quote"
-        className="text-light-cyan text-2xl font-extrabold md:text-3xl"
+        className={
+          "text-light-cyan text-2xl font-extrabold md:text-3xl" +
+          ` ${fadeIn ? "animate-[fadeIn_1s_ease-in-out]" : ""}`
+        }
       >
         {message}
       </q>
