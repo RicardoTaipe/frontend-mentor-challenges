@@ -1,5 +1,6 @@
 
-advanced/
-newbies/
-junior/notifications-page-main
+advanced/*
+newbies/*
+!newbies/social-links-profile-main
+junior/*
 
