@@ -81,6 +81,11 @@ select {
   --grey: hsl(0, 0%, 20%);
   --dark-grey: hsl(0, 0%, 12%);
   --off-black: hsl(0, 0%, 8%);
+  --green: hsl(75, 94%, 57%);
+
+  --regular: 400;
+  --semibold: 600;
+  --bold: 700;
 }
 
 body {
@@ -89,7 +94,56 @@ body {
   align-items: center;
   min-height: 100vh;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
+  font-weight: var(--regular);
+  font-size: 14px;
   background-color: var(--off-black);
+}
+
+.card{
+  background-color: var(--dark-grey);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 88%;
+  max-width: 328px;
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.card__image{
+  border-radius: 50%;
+  object-fit: cover;
+  width: 32%;
+}
+.card__title{
+  color: var(--white);
+  font-weight: var(--bold);
+  margin-top: 1.25rem;
+  font-size: 1.5rem;
+}
+.card__subtitle{
+  color: var(--green);
+  font-weight: var(--semibold);
+}
+.card__body{
+  color: var(--white);
+  margin-block: 1rem;
+}
+.card__links{
+  width: 100%;
+  list-style-type: none;
+  border: 1px solid red;
+  background-color: var(--grey);
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
+.card__link-item{
+  text-decoration: none;
+  color: var(--white);
+  font-weight: var(--semibold);
+}
+.card__link-item--active{
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: var(--semibold);
 }
