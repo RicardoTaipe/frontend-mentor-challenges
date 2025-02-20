@@ -157,7 +157,7 @@ body {
     padding-inline: 24px;
     top: 36px;
   }
-  .quote {
+  .card__quote {
     font-size: 28px;
   }
   .card__title {
