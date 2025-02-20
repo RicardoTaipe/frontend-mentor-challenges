@@ -1,0 +1,9 @@
+// Workspace settings
+{
+    // The following will hide files in the editor
+    "files.exclude": {
+        "intermediate": true,
+        "newbies": true,
+        "junior/**": false
+    }
+}
