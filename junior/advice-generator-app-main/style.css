@@ -22,8 +22,8 @@ dd {
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul[role="list"],
+ol[role="list"] {
   list-style: none;
 }
 
@@ -90,7 +90,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  font-family: 'Manrope', sans-serif;
+  font-family: "Manrope", sans-serif;
   background-color: var(--dark-blue);
   min-height: 100vh;
 }
@@ -105,7 +105,7 @@ body {
   transform: translateY(-3rem);
 }
 
-.card-title {
+.card__title {
   color: var(--neon-green);
   font-size: 10px;
   text-transform: uppercase;
@@ -113,14 +113,14 @@ body {
   margin-top: 2.625rem;
   margin-bottom: 1.5rem;
 }
-.quote {
+.card__quote {
   color: var(--light-cyan);
   font-size: 22px;
   font-weight: 800;
   letter-spacing: 0.04rem;
 }
 
-.card-divider {
+.card__divider {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +128,7 @@ body {
   margin-bottom: 4rem;
 }
 
-.card-btn {
+.card__btn {
   border: none;
   border-radius: 50%;
   background-color: var(--neon-green);
@@ -137,10 +137,17 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 1.25rem;
+  cursor: pointer;
+  transition: all 500ms ease-in-out;
+}
+
+.card__btn--loading {
+  cursor: wait;
+  opacity: 0.5;
 }
 
 @media (hover: hover) {
-  .card-btn:hover {
+  .card__btn:hover {
     box-shadow: 0px 0px 39px 5px var(--neon-green);
   }
 }
@@ -153,10 +160,10 @@ body {
   .quote {
     font-size: 28px;
   }
-  .card-title {
+  .card__title {
     margin-top: 3rem;
   }
-  .card-divider {
+  .card__divider {
     margin-top: 2.5rem;
     margin-bottom: 3.5rem;
   }

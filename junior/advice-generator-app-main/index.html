@@ -22,20 +22,26 @@
   </head>
   <body>
     <main class="card">
-      <h1 class="card-title">Advice #71</h1>
-      <q class="quote">
-        It is easy to sit up and take notice, what's difficult is getting up and
-        taking action.
+      <h1 class="card__title" id="advice-title">Advice #71</h1>
+      <q class="card__quote" aria-labelledby="advice-title">
+        "It is easy to sit up and take notice, what's difficult is getting up
+        and taking action."
       </q>
-      <picture class="card-divider">
-        <source
-          media="(min-width: 376px)"
-          srcset="images/pattern-divider-desktop.svg"
-        />
-        <img src="images/pattern-divider-mobile.svg" alt="divider" />
-      </picture>
-      <button class="card-btn">
-        <img src="images/icon-dice.svg" alt="icon" />
+      <div class="card__divider">
+        <picture>
+          <source
+            media="(min-width: 376px)"
+            srcset="images/pattern-divider-desktop.svg"
+          />
+          <img
+            src="images/pattern-divider-mobile.svg"
+            alt="Decorative divider"
+            aria-hidden="true"
+          />
+        </picture>
+      </div>
+      <button class="card__btn" aria-label="Generate a new advice">
+        <img src="images/icon-dice.svg" alt="Dice icon" />
       </button>
     </main>
     <script src="index.js"></script>

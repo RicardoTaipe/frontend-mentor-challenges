@@ -1,42 +1,43 @@
-const button = document.querySelector('.card-btn');
-const title = document.querySelector('.card-title');
-const quote = document.querySelector('.quote');
+const button = document.querySelector(".card__btn");
+const title = document.querySelector(".card__title");
+const quote = document.querySelector(".card__quote");
 
-fetchQuote(71)
-  .then((data) => {
-    updateView(data);
-  })
-  .catch(() => {
-    updateView({ id: 'error', advice: 'Somethin went wrong!. Try again.' });
-  });
+const init = async () => {
+  const data = await fetchQuote(71);
+  updateView(data);
+};
 
-button.addEventListener('click', async () => {
-  fetchQuote()
-    .then((data) => {
-      updateView(data);
-    })
-    .catch(() => {
-      updateView({ id: 'error', advice: 'Somethin went wrong!. Try again.' });
-    });
+document.addEventListener("DOMContentLoaded", init);
+
+button.addEventListener("click", async () => {
+  const data = await fetchQuote();
+  updateView(data);
 });
 
 function updateView(data) {
-  title.innerHTML = `ADVICE #${data.id}`;
-  quote.innerHTML = data.advice;
+  title.textContent = `ADVICE #${data.id}`;
+  quote.textContent = data.advice;
 }
 
 async function fetchQuote(slip_id) {
-  let url = 'https://api.adviceslip.com/advice';
-
+  let url = "https://api.adviceslip.com/advice";
   if (slip_id !== undefined) {
     url = `https://api.adviceslip.com/advice/${slip_id}`;
   }
-  const response = await fetch(url);
 
-  if (!response.ok) {
-    const message = `An error has occured: ${response.status}`;
-    throw new Error(message);
+  button.disabled = true;
+  button.classList.add("card__btn--loading");
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`An error has occurred: ${response.status}`);
+    }
+    const { slip: data } = await response.json();
+    return data;
+  } catch (error) {
+    return { id: "error", advice: "Something went wrong! Try again." };
+  } finally {
+    button.disabled = false;
+    button.classList.remove("card__btn--loading");
   }
-  const { slip: data } = await response.json();
-  return data;
 }
